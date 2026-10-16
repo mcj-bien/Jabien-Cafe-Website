@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jabien's Golden Mug Café</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="desktop-frame">
+    <header class="top-header">
+      <a class="brand" href="#home" aria-label="Jabien's Golden Mug Café home">
+        <span class="cup-icon" aria-hidden="true">☕</span>
+        <span class="brand-name">Jabien's<br><b>Golden Mug Café</b></span>
+      </a>
+
+      <div class="header-tools">
+        <label class="search-box">
+          <input id="searchInput" type="search" placeholder="Search..." aria-label="Search menu">
+          <button id="searchButton" type="button" aria-label="Search">⌕</button>
+        </label>
+        <button class="cart-button" type="button" aria-label="Shopping cart" onclick="showNotice('Your shopping cart is ready for your order.')">🛒</button>
+        <button class="profile-button" type="button" aria-label="Profile" onclick="showNotice('Welcome to Jabien’s Golden Mug Café!')"><span></span></button>
+      </div>
+    </header>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home"><span class="nav-icon">⌂</span> HOME</a>
+      <a href="#menu"><span class="nav-icon menu-icon">☷</span> MENU</a>
+      <a href="#about"><span class="nav-icon info-icon">i</span> ABOUT US</a>
+      <a href="#order"><span class="nav-icon phone-icon">▤</span> ORDER ONLINE</a>
+      <a href="#contact"><span class="nav-icon contact-icon">⌕</span> CONTACT</a>
+    </nav>
+
+    <div class="page-layout" id="home">
+      <aside class="sidebar">
+        <section class="side-card order-card" id="order">
+          <h2>ORDER ONLINE</h2>
+          <ul>
+            <li>Step 1: Select items from menu</li>
+            <li>Step 2: Choose pickup or delivery</li>
+            <li>Step 3: Checkout form → Name,<br> Address, Payment method</li>
+          </ul>
+          <a class="side-link" href="#menu">Start your order →</a>
+        </section>
+
+        <section class="side-card about-card" id="about">
+          <h2>ABOUT US</h2>
+          <ul>
+            <li><a href="#story">Image of café interior</a></li>
+            <li><a href="#story">Short story about Jabien's Golden Mug Café (history, passion, mission)</a></li>
+            <li><a href="#team">Team section: pictures and names of baristas</a></li>
+          </ul>
+        </section>
+      </aside>
+
+      <section class="main-content">
+        <section class="hero">
+          <p class="eyebrow">A little warmth in every cup</p>
+          <h1>YOUR DAILY DOSE<br>OF FRESHLY BREWED HAPPINESS</h1>
+          <a class="order-now" href="#menu">ORDER NOW</a>
+        </section>
+
+        <section class="menu-section" id="menu">
+          <div class="section-heading-row">
+            <h2>MENU</h2>
+            <span class="small-note">Made fresh, served with love</span>
+          </div>
+          <div class="product-row" id="productRow">
+            <article class="product-card" data-name="golden caramel latte">
+              <img src="images/caramel-latte.jpg" alt="Golden caramel latte">
+              <h3>GOLDEN CARAMEL<br>LATTE</h3>
+              <p class="price">₱145</p>
+            </article>
+            <article class="product-card" data-name="velvet mocha bliss">
+              <img src="images/mocha.jpeg" alt="Velvet mocha drink">
+              <h3>VELVET MOCHA<br>BLISS</h3>
+              <p class="price">₱155</p>
+            </article>
+            <article class="product-card" data-name="honey cinnamon cappuccino">
+              <img src="images/cappuccino.png" alt="Honey cinnamon cappuccino">
+              <h3>HONEY CINNAMON<br>CAPPUCCINO</h3>
+              <p class="price">₱150</p>
+            </article>
+            <article class="product-card" data-name="classic croissant brew combo">
+              <img src="images/croissant.jpeg" alt="Coffee and croissant">
+              <h3>CLASSIC CROISSANT &amp;<br>BREW COMBO</h3>
+              <p class="price">₱185</p>
+            </article>
+            <article class="product-card" data-name="choco chip banana bread slice">
+              <img src="images/banana-bread.jpg" alt="Chocolate chip banana bread slice">
+              <h3>CHOCO CHIP BANANA<br>BREAD SLICE</h3>
+              <p class="price">₱95</p>
+            </article>
+          </div>
+          <p id="noResults" class="no-results" hidden>No menu items match your search.</p>
+        </section>
+
+        <section class="happy-hour">
+          <span class="sparkle">✦</span>
+          <h2>HAPPY HOUR: 15% OFF FROM 3PM–5PM</h2>
+          <span class="sparkle">✦</span>
+          <a href="#menu">See All Deals</a>
+        </section>
+
+        <section class="contact-panel" id="contact">
+          <h2>CAFÉ CONTACT INFO:</h2>
+          <ul>
+            <li><span>📍</span> ADDRESS: CAGAYAN DE ORO CITY, PHILIPPINES</li>
+            <li><span>📞</span> PHONE: <a href="tel:+639491137269">+63 949 113 7269</a></li>
+            <li><span>✉️</span> EMAIL: <a href="mailto:JABIEN.MARIACRISTINA12@GMAIL.COM">JABIEN.MARIACRISTINA12@GMAIL.COM</a></li>
+            <li><span>⏰</span> OPEN HOURS: MON–SUN | 7:00 AM – 9:00 PM</li>
+          </ul>
+        </section>
+      </section>
+    </div>
+
+    <section class="story-strip" id="story">
+      <div>
+        <p class="mini-label">OUR STORY</p>
+        <h2>A cozy corner, a golden cup.</h2>
+        <p>Jabien's Golden Mug Café is a welcoming place for freshly brewed coffee, sweet treats, and good company. Every cup is prepared with care to make your day a little brighter.</p>
+      </div>
+      <img src="images/cafe-interior.webp" alt="Warm café interior">
+    </section>
+
+    <section class="team-strip" id="team">
+      <h2>MEET OUR CAFÉ TEAM</h2>
+      <div class="team-grid">
+        <article><img src="images/barista-cristina.png" alt="Barista Cristina"><h3>Cristina</h3><p>Head Barista</p></article>
+        <article><img src="images/barista-tina.png" alt="Barista Tina"><h3>Tina</h3><p>Coffee Specialist</p></article>
+        <article><img src="images/barista-maria.png" alt="Barista Maria"><h3>Maria</h3><p>Pastry &amp; Service</p></article>
+      </div>
+    </section>
+
+    <footer>Jabien's Golden Mug Café · Made with warmth in Cagayan de Oro City</footer>
+  </main>
+
+  <div id="notice" class="notice" role="status" aria-live="polite"></div>
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const products = [...document.querySelectorAll('.product-card')];
+    const noResults = document.getElementById('noResults');
+
+    function searchMenu() {
+      const term = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+      products.forEach(product => {
+        const matches = product.dataset.name.includes(term);
+        product.hidden = !matches;
+        if (matches) visibleCount++;
+      });
+      noResults.hidden = visibleCount !== 0;
+    }
+    searchButton.addEventListener('click', searchMenu);
+    searchInput.addEventListener('input', searchMenu);
+    searchInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') searchMenu();
+    });
+
+    let noticeTimer;
+    function showNotice(message) {
+      const notice = document.getElementById('notice');
+      notice.textContent = message;
+      notice.classList.add('show');
+      clearTimeout(noticeTimer);
+      noticeTimer = setTimeout(() => notice.classList.remove('show'), 2800);
+    }
+  </script>
+</body>
+</html>
